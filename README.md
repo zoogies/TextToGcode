@@ -25,3 +25,10 @@ Then you can call the ToGcode function with your arguments to output or return y
 - visualize: returns a raw list of tuples (this method is likely to be removed)
 
 **Feedrate**: integer used to specify the feed rate for the gcode operations
+
+**On Off Fast Slow Commands**: string commands for certain gcode operations. ex:
+
+- ON: "M03 S500"
+- OFF: "M05 S0"
+- FAST: "G0"
+- SLOW: "G1"
