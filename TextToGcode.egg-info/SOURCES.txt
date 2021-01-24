@@ -1,0 +1,8 @@
+README.md
+setup.py
+TextToGcode.egg-info/PKG-INFO
+TextToGcode.egg-info/SOURCES.txt
+TextToGcode.egg-info/dependency_links.txt
+TextToGcode.egg-info/top_level.txt
+ttgLib/TextToGcode.py
+ttgLib/__init__.py
