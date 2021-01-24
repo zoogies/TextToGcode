@@ -17,8 +17,10 @@
 # TODO naming convention of basically everything
 # TODO put copyright header on this lib
 # TODO optional: M117 Printing...;Put printing message on LCD screen
+# TODO text size
+# TODO return error for unsupported character
 
-import math
+from math import cos, sin, radians
 import time
 from os import remove, rename
 
@@ -28,7 +30,7 @@ class ttg:
         # set basic passed args
         self.text = text
         self.size = size
-        self.rotation = rotation
+        self.rotation = radians(rotation)
         self.method = method
         self.feedRate = str(feedRate)
 
@@ -59,13 +61,13 @@ class ttg:
                 originY = 0
                 newpointX = (
                     originX
-                    + math.cos(self.rotation) * (point[0] - originX)
-                    - math.sin(self.rotation) * (point[1] - originY)
+                    + cos(self.rotation) * (point[0] - originX)
+                    - sin(self.rotation) * (point[1] - originY)
                 )
                 newpointY = (
                     originY
-                    + math.sin(self.rotation) * (point[0] - originX)
-                    + math.cos(self.rotation) * (point[1] - originY)
+                    + sin(self.rotation) * (point[0] - originX)
+                    + cos(self.rotation) * (point[1] - originY)
                 )
                 newpoint = (newpointX, newpointY)
                 finalOperations.append(newpoint)
