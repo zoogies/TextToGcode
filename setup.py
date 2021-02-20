@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="TextToGcode",  # Replace with your own username
-    version="1.1.0",
+    version="1.2.0",
     author="Ryan Zmuda",
     author_email="ryanzmuda@gmail.com",
     description="Convert strings to gcode commands.",

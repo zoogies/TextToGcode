@@ -22,6 +22,22 @@ from math import cos, sin, radians
 
 class ttg:
     def __init__(self, text, size, rotation, method, feedRate):
+        # validate input types
+        if type(text) != str:
+            raise Exception("TTG ERROR - passed text needs to be a string")
+
+        if type(size) != int:
+            raise Exception("TTG ERROR - passed size needs to be a int")
+
+        if type(rotation) != int:
+            raise Exception("TTG ERROR - passed size rotation to be a int")
+
+        if type(method) != str:
+            raise Exception("TTG ERROR - passed return method needs to be a string")
+
+        if type(feedRate) != int:
+            raise Exception("TTG ERROR - passed feed rate needs to be a int")
+
         # set basic passed args
         self.text = text
         self.size = size
@@ -222,7 +238,6 @@ class ttg:
             (0 + xOff, 4),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -243,6 +258,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 0),
@@ -286,6 +302,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "off",
             "fast",
             (5 + xOff, 1),
@@ -300,7 +317,6 @@ class ttg:
             (5 + xOff, 8),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -321,6 +337,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -331,6 +348,7 @@ class ttg:
             (4 + xOff, 1),
             (3 + xOff, 0),
             (0 + xOff, 0),
+            (0 + xOff, 9),
             "off",
             "fast",
         ]
@@ -353,6 +371,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -369,6 +388,7 @@ class ttg:
             "on",
             "slow",
             (0 + xOff, 0),
+            (0 + xOff, 9),
             "off",
             "fast",
         ]
@@ -391,6 +411,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -404,6 +425,11 @@ class ttg:
             "off",
             "fast",
             (0 + xOff, 0),
+            "on",
+            "slow",
+            (0 + xOff, 9),
+            "off",
+            "fast",
         ]
 
         ttg.appendPoints(self, points)
@@ -440,7 +466,6 @@ class ttg:
             (4 + xOff, 4),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -461,6 +486,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -475,10 +501,9 @@ class ttg:
             (0 + xOff, 5),
             "on",
             "slow",
-            (0 + xOff, 5),
+            (5 + xOff, 5),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -499,6 +524,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (4 + xOff, 0),
@@ -516,7 +542,6 @@ class ttg:
             (2 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -537,6 +562,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (1 + xOff, 0),
@@ -551,7 +577,6 @@ class ttg:
             (4 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -572,6 +597,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -585,6 +611,7 @@ class ttg:
             (3 + xOff, 5),
             (2 + xOff, 4),
             (1 + xOff, 4),
+            (0 + xOff, 4),
             (2 + xOff, 4),
             (3 + xOff, 3),
             (4 + xOff, 2),
@@ -592,7 +619,6 @@ class ttg:
             (5 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -620,7 +646,6 @@ class ttg:
             (5 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -641,6 +666,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -655,7 +681,6 @@ class ttg:
             (6 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -676,6 +701,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 9),
@@ -683,7 +709,6 @@ class ttg:
             (5 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -714,9 +739,9 @@ class ttg:
             (5 + xOff, 1),
             (4 + xOff, 0),
             (1 + xOff, 0),
+            (0 + xOff, 1),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -737,6 +762,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 8),
@@ -748,7 +774,6 @@ class ttg:
             (0 + xOff, 4),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -781,13 +806,15 @@ class ttg:
             (5 + xOff, 0),
             "off",
             "fast",
-            (3 + xOff, 0),
+            (4 + xOff, 1),
             "on",
             "slow",
+            (4 + xOff, 1),
+            (3 + xOff, 0),
             (1 + xOff, 0),
+            (0 + xOff, 1),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -808,6 +835,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 8),
@@ -829,7 +857,6 @@ class ttg:
             (5 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -850,6 +877,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (4 + xOff, 0),
@@ -863,7 +891,6 @@ class ttg:
             (5 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -896,7 +923,6 @@ class ttg:
             (4 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -927,7 +953,6 @@ class ttg:
             (5 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -955,7 +980,6 @@ class ttg:
             (4 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -989,7 +1013,6 @@ class ttg:
             (6 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1011,6 +1034,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (4 + xOff, 9),
@@ -1022,7 +1046,6 @@ class ttg:
             (4 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1058,7 +1081,6 @@ class ttg:
             (2 + xOff, 4),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1088,7 +1110,6 @@ class ttg:
             (5 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1122,7 +1143,6 @@ class ttg:
             (2 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1152,7 +1172,6 @@ class ttg:
             (0 + xOff, 8),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1193,7 +1212,6 @@ class ttg:
             (0 + xOff, 8),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1227,7 +1245,6 @@ class ttg:
             (4 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1294,7 +1311,6 @@ class ttg:
             (0 + xOff, 4),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1315,13 +1331,13 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (4 + xOff, 9),
             (0 + xOff, 9),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1364,7 +1380,6 @@ class ttg:
             (3 + xOff, 0),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1396,7 +1411,6 @@ class ttg:
             (4 + xOff, 4),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1430,7 +1444,6 @@ class ttg:
             (0 + xOff, 1),
             "off",
             "fast",
-            (0 + xOff, 0),
         ]
 
         ttg.appendPoints(self, points)
@@ -1613,6 +1626,19 @@ class ttg:
             return ttg.collectCharacters(self)
 
     def toGcode(self, onPower, offPower, fast, slow):
+        # validate inputs
+        if type(onPower) != str:
+            raise Exception("TTG ERROR - passed on command needs to be a string")
+
+        if type(offPower) != str:
+            raise Exception("TTG ERROR - passed off command needs to be a string")
+
+        if type(fast) != str:
+            raise Exception("TTG ERROR - passed fast command needs to be a string")
+
+        if type(slow) != str:
+            raise Exception("TTG ERROR - passed slow command needs to be a string")
+
         self.onPowerCmd = onPower
         self.offPowerCmd = offPower
         self.fastCmd = fast

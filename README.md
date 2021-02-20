@@ -3,7 +3,9 @@
 [![PyPI version](https://badge.fury.io/py/TextToGcode.svg)](https://badge.fury.io/py/TextToGcode) 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
- A python library you can utilize to create custom gcode commands from a string.
+ A python library you can utilize to create custom gcode commands from a string. Intended to be used to engrave or draw text with cnc machines.
+
+![numbers](https://i.imgur.com/Gk8xTg3.png)
 
 ## Usage
 
