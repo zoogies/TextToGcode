@@ -25,11 +25,15 @@ License-File: LICENSE
 
 ## Installation
 
-install with `pip install TextToGcode` or download the file from the github
+install with `pip install TextToGcode` or download the file from the github if you want to use via the command line
 
 ## Command Line Usage
 
-navigate to the location of TextToGcode.py TODO
+navigate to the location of TextToGcode.py and run it with
+
+`python3 TextToGcode.py "TEXT" SIZE ROTATION MODE FEEDRATE "ON COMMAND" "OFF COMMAND" "FAST COMMAND" "SLOW COMMAND"`
+
+the important part is that all multi word arguments are surrounded with quotation marks as seen above
 
 ## Library Usage
 
