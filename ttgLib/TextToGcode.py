@@ -16,6 +16,7 @@
 
 
 import time
+import sys
 from os import remove, rename
 from math import cos, sin, radians
 
@@ -220,6 +221,7 @@ class ttg:
         xOff = self.currentXOffset
 
         points = [
+            (0 + xOff, 0),
             "on",
             "slow",
             (0 + xOff, 0),
@@ -1645,3 +1647,61 @@ class ttg:
         self.slowCmd = slow
 
         return ttg.encode(self)
+
+
+if __name__ == "__main__":
+    # if the file is ran from the command line we need to get the args
+    args = sys.argv
+    args.pop(0)  # useless arg
+
+    # argument order:
+    # 0. text surrounded by ""
+    # 1. integer for scaling size of text
+    # 2. integer of the degrees of rotation of the text
+    # 3. string representing the mode of return (return, file or visualize)
+    # 4. integer representing feedrate
+    # 5. string for on command surrounded by ""
+    # 6. string for off command surrounded by ""
+    # 7. string for fast command surrounded by ""
+    # 8. string for slow command surrounded by ""
+
+    # ensure that we are running from the command line with all arguments
+    if args:
+        # if we have the correct amound of arguments supplied
+        if len(args) == 9:
+            try:
+                args[0] = str(args[0])
+                args[1] = int(args[1])
+                args[2] = int(args[2])
+                args[3] = str(args[3])
+                args[4] = int(args[4])
+                args[5] = str(args[5])
+                args[6] = str(args[6])
+                args[7] = str(args[7])
+                args[8] = str(args[8])
+
+            except:
+                print(
+                    "TTGLIB ERROR: something has gone wrong validating command line arguments"
+                )
+                exit()
+
+            # call the library to act on our parameters supplied in the arguments
+            print(
+                ttg(args[0], args[1], args[2], args[3], args[4]).toGcode(
+                    args[5], args[6], args[7], args[8]
+                )
+            )
+
+        else:
+            print(
+                "TTGLIB ERROR: you have supplied "
+                + str(len(args))
+                + " arguments when 9 are required to run"
+            )
+            exit()
+    else:
+        print(
+            "TTGLIB ERROR: This program is not intended to be ran directly. Please refer to the readme :)"
+        )
+        exit()

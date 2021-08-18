@@ -7,15 +7,27 @@
 
 ![numbers](https://i.imgur.com/Gk8xTg3.png)
 
-## Usage
+## Installation
 
-install with `pip install TextToGcode`
+install with `pip install TextToGcode` or download the file from the github if you want to use via the command line
+
+## Command Line Usage
+
+navigate to the location of TextToGcode.py and run it with
+
+`python3 TextToGcode.py "TEXT" SIZE ROTATION MODE FEEDRATE "ON COMMAND" "OFF COMMAND" "FAST COMMAND" "SLOW COMMAND"`
+
+the important part is that all multi word arguments are surrounded with quotation marks as seen above
+
+## Library Usage
 
 import into your project with `from ttgLib.TextToGcode import ttg`
 
 Then you can call the ToGcode function with your arguments to output or return your gcode as a file or list:
 
 `ttg(TEXT, SIZE, ROTATION, MODE, FEEDRATE).toGcode("ON COMMAND", "OFF COMMAND", "FAST COMMAND", "SLOW COMMAND")`
+
+## Explanation of arguments:
 
 **Text**: a string for the text you want to be transformed to gcode, accepted characters are a-z, 0-9
 
