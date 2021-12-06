@@ -2,6 +2,8 @@
 
 [![PyPI version](https://badge.fury.io/py/TextToGcode.svg)](https://badge.fury.io/py/TextToGcode) 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Downloads](https://static.pepy.tech/personalized-badge/texttogcode?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Total%20Downloads)](https://pepy.tech/project/texttogcode)
+[![Downloads](https://static.pepy.tech/personalized-badge/texttogcode?period=month&units=international_system&left_color=grey&right_color=brightgreen&left_text=Monthly%20Downloads)](https://pepy.tech/project/texttogcode)
 
  A python library you can utilize to create custom gcode commands from a string. Intended to be used to engrave or draw text with cnc machines.
 
